@@ -64,7 +64,7 @@ services:
       - DISABLE_REGISTRATION
       - ENABLE_EMAIL_VERIFICATION
       # web: https://github.com/plausible/community-edition/wiki/configuration#web
-      - HTTP_PORT
+      - HTTP_PORT=8000
       - HTTPS_PORT
       # databases: https://github.com/plausible/community-edition/wiki/configuration#database
       - DATABASE_URL
