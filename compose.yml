@@ -5,7 +5,7 @@ services:
     volumes:
       - db-data:/var/lib/postgresql/data
     environment:
-      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_PASSWORD="5u-TctzGZs6vc5rKxN9NcsaD"
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U postgres"]
       start_period: 1m
@@ -67,8 +67,8 @@ services:
       - HTTP_PORT=8000
       - HTTPS_PORT
       # databases: https://github.com/plausible/community-edition/wiki/configuration#database
-      - DATABASE_URL
-      - CLICKHOUSE_DATABASE_URL
+      - DATABASE_URL="postgres://postgres:5u-TctzGZs6vc5rKxN9NcsaD@plausible_db:5432/plausible_db"
+      - CLICKHOUSE_DATABASE_URL="http://plausible_events_db:8123/plausible_events_db"
       # Google: https://github.com/plausible/community-edition/wiki/configuration#google
       - GOOGLE_CLIENT_ID
       - GOOGLE_CLIENT_SECRET
